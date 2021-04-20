@@ -4,11 +4,11 @@
 
 KMP算法是一种进行字符串匹配的算法。在字符串a中匹配模式串b，暴力做法为对a中每个位置都去匹配b，若能够匹配，则返回对应位置，时间复杂度为O(mn)。但是在匹配过程中，实际上有一些重复匹配的操作，如果记录下来就可以在匹配失败时跳转到下一个该匹配的位置，而不是从头开始。
 
-![kmp2](/Users/tianyuecao/OneDrive/personal/coding-problem/kmp2.gif)
+![image](https://github.com/tianyuecao/Coding-Problems/blob/main/images/kmp2.gif)
 
 KMP算法的核心是前缀表（代码中的next数组），用于记录待匹配模式串中0至i-1个字符的相同前缀和后缀的最大长度。
 
-![kmp1](/Users/tianyuecao/OneDrive/personal/coding-problem/kmp1.png)
+![image](https://github.com/tianyuecao/Coding-Problems/blob/main/images/kmp1.png)
 
 如对于"abcab"子串相同前缀和后缀的最大长度为2，通过记录的next可以在出现不匹配的时候不跳转回待匹配字符串头部，而是跳转到下一个需要匹配的位置。
 
